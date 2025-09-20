@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.css';
+
+const navLinkClass = ({ isActive }) => (isActive ? styles.active : '');
 
 export const Navigation = () => {
   return (
@@ -9,16 +11,24 @@ export const Navigation = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Dashboard</NavLink>
+            <NavLink to="/" className={navLinkClass}>
+              Dashboard
+            </NavLink>
           </li>
           <li>
-            <NavLink to="stats">Stats</NavLink>
+            <NavLink to="stats" className={navLinkClass}>
+              Stats
+            </NavLink>
           </li>
           <li>
-            <NavLink to="categories">Categories</NavLink>
+            <NavLink to="categories" className={navLinkClass}>
+              Categories
+            </NavLink>
           </li>
           <li>
-            <NavLink to="settings">Settings</NavLink>
+            <NavLink to="settings" className={navLinkClass}>
+              Settings
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout } from './layouts/layouts';
-import { Dashboard, Stats, Categories, Settings } from './pages/index';
+import { Layout } from '@/layouts/layouts';
+import { Dashboard, Stats, Categories, Settings } from '@/pages/index';
 
 export default function App() {
   return (
