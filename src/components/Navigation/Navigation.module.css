@@ -1,0 +1,15 @@
+.nav {
+  background-color: rgba(68, 68, 189, 0.895);
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  padding: 10px;
+}
+
+a.active {
+  color: rgb(0, 0, 0);
+}
