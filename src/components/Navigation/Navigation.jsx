@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ROUTES } from '@/constants/router';
 
 import styles from './navigation.module.css';
 
@@ -10,26 +11,13 @@ export const Navigation = () => {
     <aside className={styles.nav}>
       <nav>
         <ul>
-          <li>
-            <NavLink to="/" className={navLinkClass}>
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="stats" className={navLinkClass}>
-              Stats
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="categories" className={navLinkClass}>
-              Categories
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="settings" className={navLinkClass}>
-              Settings
-            </NavLink>
-          </li>
+          {ROUTES.map(({ path, label }) => (
+            <li key={path}>
+              <NavLink to={path} className={navLinkClass}>
+                {label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>
