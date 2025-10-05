@@ -4,9 +4,11 @@ import { addIncome, addExpense } from '@/store/financeSlice.js';
 
 export const Dashboard = () => {
   const dispatch = useDispatch();
+
   const { balance, incomeMonth, expenseMonth } = useSelector(
     state => state.finance
   );
+
   const [amount, setAmount] = useState('');
 
   const handleIncome = () => {
