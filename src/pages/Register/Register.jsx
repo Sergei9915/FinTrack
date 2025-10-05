@@ -41,7 +41,7 @@ export const Register = () => {
             onChange={e => setPassword(e.target.value)}
             autoComplete="current-password"
           />
-          <button type="submit">Sig In</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
     </div>
