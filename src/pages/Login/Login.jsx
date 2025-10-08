@@ -1,17 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthForm } from '@/components/AuthForm/AuthForm';
 
 export const Login = () => {
   const navigate = useNavigate();
 
-  const handleRegister = () => {
+  const handleLogin = e => {
+    e.preventDefault();
     navigate('/register');
   };
 
-  return (
-    <div>
-      <p>Hello Login</p>
-      <button onClick={handleRegister}>Login</button>
-    </div>
-  );
+  return <AuthForm type="login" onSubmit={handleLogin} />;
 };
