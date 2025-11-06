@@ -1,28 +1,27 @@
-.centerBlock {
+.wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   justify-content: center;
-  background-color: #f6f9fc;
+  background: #f6f9fc;
 }
 
-.brandTitle {
+.title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 48px;
   text-align: center;
-  background: linear-gradient(90deg, #00b4d8, #48cae4, #90e0ef, #00b4d8);
+  background: linear-gradient(90deg, #00b4d8, #48cae4, #90e0ef);
   background-size: 300%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: gradientMove 5s linear infinite;
+  animation: gradientMove 4s ease-in-out 1s infinite alternate;
 }
 
-
-.registerBlock form {
+.authForm {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.registerBlock input {
+.authForm input {
   width: 100%;
   color: #1e293b;
   font-size: 14px;
@@ -45,12 +44,12 @@
   transition: border-color 0.2s ease;
 }
 
-.registerBlock input:focus {
+.authForm input:focus {
   border-color: #00b4d8;
   box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
 }
 
-.registerBlock button {
+.authForm button {
   width: 100%;
   background-color: #00b4d8;
   color: #ffff;
@@ -63,7 +62,7 @@
   transition: background 0.3s ease;
 }
 
-.registerBlock button:hover {
+.authForm button:hover {
   background-color: #0096c7;
 }
 
